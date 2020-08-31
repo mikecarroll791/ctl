@@ -1,0 +1,106 @@
+Title: Indigency "Flowchart"
+Author: [Michael Carroll]
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in [Idaho].</p>
+
+
+Q(1):Have you been charged with a crime in Idaho
+A:Yes 
+	Q(1.1):GOTO:assist
+A:No
+	Q(1.2):Sorry, you can only receive assistance if you have been charged with a crime in Idaho.
+
+Q(assist): Do you or any of your dependents receive public assistance in the form of food assistance, health coverage, cash assistance or child care?
+A:Yes
+	Q(2.1):GOTO:eligible
+A:No 
+	Q(2.2):GOTO:household
+Q(household):How many people (including you) live in your household?
+A:One
+	Q(3.1):GOTO:income_1
+A:Two
+	Q(3.2):GOTO:income_2 
+A:Three
+	Q(3.3):GOTO:income_3
+A:Four
+	Q(3.4):GOTO:income_4
+A:Five 
+	Q(3.5):GOTO:income_5
+A:Six
+	Q(3.6):GOTO:income_6
+A:Seven
+	Q(3.7):GOTO:income_7
+A:Eight
+	Q(3.12):GOTO:income_8
+A:More than 8
+	Q(3.13): Add an additional $688.08 to 6,874.99 for each additional person living in the household. If you earn less than that total, you are eligible. Otherwise, you are ineligible. 
+
+Q(income_1):Do you make more than $1,988.43 a month?
+A:Yes
+	Q(4.1):GOTO:ineligible
+A:No
+	Q(4.2):GOTO:eligible
+Q(income_2):Do you make more than $2,686.51 a month? 
+A:Yes
+	Q(5.1):GOTO:ineligible
+A:No
+	Q(5.2):GOTO:eligible
+Q(income_3):Do you make more than $3,384.59 a month? 
+A:Yes
+	Q(6.1):GOTO:ineligible
+A:No
+	Q(6.2):GOTO:eligible
+Q(income_4):Do you make more than $4,082.67 a month?
+A:Yes
+	Q(7.1):GOTO:ineligible
+A:No
+	Q(7.2):GOTO:eligible
+Q(income_5):Do you make more than $4,780.75 a month?
+A:Yes
+	Q(8.1):GOTO:ineligible
+A:No
+	Q(8.2):GOTO:eligible
+Q(income_6):Do you make more than $5,478.83 a month?
+A:Yes
+	Q(9.1):GOTO:ineligible
+A:No
+	Q(9.2):GOTO:eligible
+Q(income_7):Do you make more than $6,176.91 a month?
+A:Yes
+	Q(10.1):GOTO:ineligible
+A:No
+	Q(10.2):GOTO:eligible
+Q(income_8):Do you make more than $6,874.99 a month?
+A:Yes
+	Q(11.1):GOTO:ineligible
+A:No
+	Q(11.2):GOTO:eligible
+Q(ineligible):Ineligible
+Q(eligible):You are eligible to receive a court appointed attorney! Would you like to hear about the rules regarding costs and reimbursement?
+A:Yes, please tell me more
+	Q(13.1):GOTO:plea
+A:No, Thank you!
+Q(plea):How do you want to plead
+A:Guilty
+	Q(14.1):GOTO:crime
+A:Not Guilty
+	Q(14.2):GOTO:notguilty
+Q(crime):Have you been charged with a felony or a misdemeanor?
+A:Felony
+	Q(15.1):GOTO:felon
+	
+A:Misdemeanor
+	Q(15.2):GOTO:misd
+Q(felon):A plea of guilty to one or more felony charges is $800.
+
+Q(misd): A plea of guilty to one or more misdemeanor charges is $250
+		
+
+Q(notguilty):If the case goes to trial, the defendant shall pay the costs incurred by the office of state public defender for providing the defendant with counsel in the criminal trial. 
+
+
+
+			
