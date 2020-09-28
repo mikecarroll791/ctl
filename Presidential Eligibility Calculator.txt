@@ -1,0 +1,27 @@
+Q(1):Will you be 35 as of January 20th, during the  year you will be inaugurated?
+A:Yes
+	Q(1.1):GOTO:residency
+A:No
+	Q(1.2):GOTO:Ineligible
+	
+Q(residency):Have you lived in the United States for at least 6 months and 1 day a year, for the last 14 years?
+A:Yes
+	Q(2.1):GOTO:birth
+A:No
+	Q(2.2):GOTO:Ineligible
+Q(birth):Were you born in the U.S.?
+A:Yes
+	Q(3.1):GOTO:Eligible
+A:No
+	Q(3.2):Were your parents serving the U.S. government in a foreign country when you were born?
+	A:Yes
+		Q(3.2.1):GOTO:Eligible
+	A:No
+		Q(3.2.2):GOTO:citizens
+Q(citizens):Are both of your parents U.S. citizens?
+A:Yes
+	Q(4.1):You might be eligible...It remains unresolved (and too close to call) as to if people born outside of the US to parents who were US citizens, but were not in government service at the time of the candidate’s birth, are natural born citizens.
+A:No
+	Q(4.2):GOTO:Ineligible
+Q(Eligible):Congratulations! You are eligible to run for President. Good Luck!!!
+Q(Ineligible):I'm  sorry, you are ineligible to run for President at this time
